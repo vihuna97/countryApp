@@ -1,0 +1,13 @@
+<h2>Por Capital</h2>
+<hr>
+<div class="row">
+    <div class="col">
+        <search-box placeholder="Escriba por capital..." (onDebounce)="searchByCapital($event)"></search-box>
+    </div>
+</div>
+<shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
+<div class="row">
+    <div class="col">
+        <country-table [countries]="countries" [stateFlag]="stateFlag"></country-table>
+    </div>
+</div>
